@@ -1,0 +1,9 @@
+node_modules/
+# Rendered videos, stills and frames
+out/
+*.mp4
+*.mov
+*.webm
+.DS_Store
+# The captures of the app's pill that the film is composited from
+public/pill/

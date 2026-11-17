@@ -1,0 +1,28 @@
+{
+  "name": "voiced-film",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A film of Voiced in use, built with Remotion.",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "KEYFRAMES=$(node --no-warnings -e \"import('./src/script.ts').then((s) => console.log(s.keyframes.join(',')))\") remotion render VoicedInUse out/voiced-in-use.mp4 --concurrency=1 --props=public/pill/captures.json",
+    "plates": "python3 plates.py out/plates",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/lato": "5.3.0",
+    "@fontsource/noto-color-emoji": "5.3.2",
+    "@remotion/cli": "4.0.543",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "0.28.1",
+    "typescript": "^5.6.0"
+  }
+}

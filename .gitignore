@@ -1,0 +1,35 @@
+# Build output
+/build/
+/build-*/
+.build/
+DerivedData/
+*.xcresult
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Settings for one machine, such as the signing team
+/local.mk
+
+# Secrets never belong in the repo
+.env
+.env.*
+*.xcconfig.local
+
+# Coverage data written by instrumented test builds
+*.profraw
+
+# make snapshots
+/snapshots/
+
+# make pill-captures
+/pill-captures/
