@@ -216,7 +216,7 @@ Rules a change must keep:
 - Work on a branch. This is the person's clone: do not push, open a pull request or change a remote unless they ask.
 - If `git commit` fails with "Author identity unknown", the Mac has no git identity. Ask the person which name and email to use and pass them for that commit with `git -c user.name=… -c user.email=…`; do not write git configuration.
 - Before committing, check `git status` and `git diff --stat` for anything you did not mean to change.
-- This repository's own history is one commit per release, copied from a private working repository. `git log` shows versions, not how changes were made, so take the conventions from this file and not from the log.
+- This repository's own history is one commit per release, and now and then one between releases that changes only the documentation, copied from a private working repository. `git log` shows versions, not how changes were made, so take the conventions from this file and not from the log.
 
 ## Signing
 

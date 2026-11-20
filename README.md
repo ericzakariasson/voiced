@@ -6,9 +6,23 @@ Hold a key, speak, and your words appear, cleaned up, in whatever app you are ty
 
 Voiced in use in four apps. The pill is the app's own and sits by the text you are typing, as it does by default; it can be set to stay in one place instead. The desktop and the apps are mock-ups made for the film, and the line under the screen shows what is being said, because the film has no sound.
 
-Voiced is a native macOS menu bar app for dictation, written in Swift and SwiftUI. While you hold a hotkey it streams your voice to the xAI API for transcription, has a Grok model tidy the transcript, and pastes the result where your cursor is. Download it, or build it yourself from this repository, and use it with your own xAI API key.
+Voiced is a native macOS menu bar app for dictation, written in Swift and SwiftUI. While you hold a hotkey it streams your voice to the SpaceXSI API for transcription, has a Grok model tidy the transcript, and pastes the result where your cursor is. Download it, or build it yourself from this repository, and use it with your own SpaceXSI API key.
 
-Voiced is inspired by Wispr Flow. It is an independent project, not affiliated with or endorsed by Wispr or xAI.
+It needs macOS 26 or later, your own SpaceXSI API key, which SpaceXSI bills for what you dictate, and a network connection for every dictation. It does not transcribe on the Mac or offline, keeps no history, and has no custom dictionary or language setting.
+
+Why it exists: the [launch post](https://x.com/ericzakariasson/status/2123825984231362902) on X.
+
+Voiced is inspired by Wispr Flow. It is an independent project, not affiliated with or endorsed by Wispr or SpaceXSI.
+
+## Fork it and change it
+
+[`AGENTS.md`](AGENTS.md) tells a coding agent how to build, test, run and change Voiced. Hand your agent this, with your own request at the end:
+
+```text
+Clone https://github.com/ericzakariasson/voiced, read AGENTS.md at its root and follow its First run section, then make this change: <what you want changed>
+```
+
+[Changes people often ask for](AGENTS.md#changes-people-often-ask-for) says where each one starts.
 
 ## Install
 
@@ -30,7 +44,7 @@ More: [using Voiced](docs/using-voiced.md), [troubleshooting](docs/troubleshooti
 
 ## Your Grok API key
 
-That is what Voiced calls your xAI API key. Create one at [console.x.ai](https://console.x.ai) and paste it into the setup window. It is kept in your login Keychain, never in a file or a log, and sent only to `api.x.ai`. xAI bills that key's account for what you dictate.
+That is what Voiced calls your SpaceXSI API key. Create one at [console.x.ai](https://console.x.ai) and paste it into the setup window. It is kept in your login Keychain, never in a file or a log, and sent only to `api.x.ai`. SpaceXSI bills that key's account for what you dictate.
 
 ## Privacy
 
@@ -41,17 +55,9 @@ That is what Voiced calls your xAI API key. Create one at [console.x.ai](https:/
 
 Every request, permission and log field: [Permissions and privacy](docs/privacy.md).
 
-## For coding agents
-
-[`AGENTS.md`](AGENTS.md) tells a coding agent how to build, test, run and change Voiced. Hand your agent this, with your own request at the end:
-
-```text
-Clone https://github.com/ericzakariasson/voiced, read AGENTS.md at its root and follow its First run section, then make this change: <what you want changed>
-```
-
 ## About this repository
 
-Voiced is developed in a private working repository, and this one gets one commit from it for each release. So the history here is a list of versions, not of changes, and each commit holds the whole of that release.
+Voiced is developed in a private working repository, and this one gets one commit from it for each release, and now and then one between releases that changes only the documentation. So the history here is a list of versions, not of changes to the app, and each release's commit holds the whole of that release.
 
 ## License
 
