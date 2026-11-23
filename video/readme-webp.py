@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make the animated WebP that the repository's README shows, from a rendered film.
 
-    python3 readme-webp.py out/voiced-in-use.mp4 ../docs/media/voiced-in-use.webp
+    python3 readme-webp.py <film.mp4> ../docs/media/voiced-forks.webp
 
 Needs ffmpeg, cwebp (the `webp` package) and numpy.
 

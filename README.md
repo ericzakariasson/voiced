@@ -1,18 +1,18 @@
 # Voiced
 
-Hold a key, speak, and your words appear, cleaned up, in whatever app you are typing in.
+> it's fun building your own malleable software. as coding agents get better, anyone can do it, but it will still require understanding the problem!
+>
+> many off-the-shelf products will be recreated and replaced by custom software. that also means a lot of duplication, which maybe isn't necessary! if we open source instead, people with the same problems can build on top, and it compounds. my guess is a lot of it ends up free
+>
+> one of those is dictation and voice prompting. it's become my default way to express intent so i built this small tool
+>
+> powered by grok voice, open source, yours to fork
 
-![Voiced in use: a reply dictated in a team chat, a request to a coding agent, a reply to an email, and a line added to a note](docs/media/voiced-in-use.webp)
+![A film: Voiced's pill recording on a page; a coding agent is asked to fork Voiced and make the pill pink; the screen then splits four times into sixteen forks, each changed in its own way, and folds back into one](docs/media/voiced-forks.webp)
 
-Voiced in use in four apps. The pill is the app's own and sits by the text you are typing, as it does by default; it can be set to stay in one place instead. The desktop and the apps are mock-ups made for the film, and the line under the screen shows what is being said, because the film has no sound.
+The film has sound in the [launch post on X](https://x.com/ericzakariasson/status/2123825984231362902).
 
-Voiced is a native macOS menu bar app for dictation, written in Swift and SwiftUI. While you hold a hotkey it streams your voice to the SpaceXSI API for transcription, has a Grok model tidy the transcript, and pastes the result where your cursor is. Download it, or build it yourself from this repository, and use it with your own SpaceXSI API key.
-
-It needs macOS 26 or later, your own SpaceXSI API key, which SpaceXSI bills for what you dictate, and a network connection for every dictation. It does not transcribe on the Mac or offline, keeps no history, and has no custom dictionary or language setting.
-
-Why it exists: the [launch post](https://x.com/ericzakariasson/status/2123825984231362902) on X.
-
-Voiced is inspired by Wispr Flow. It is an independent project, not affiliated with or endorsed by Wispr or SpaceXSI.
+Voiced is remixable software: a small dictation app for macOS that is meant to be forked and changed. The whole app is here under the [MIT license](LICENSE), with [`AGENTS.md`](AGENTS.md) for a coding agent to work from, and the forks in the film are examples of what an agent could make of it: none of those changes are in Voiced itself. As it comes, you hold a key, speak, and your words appear, cleaned up, in whatever app you are typing in.
 
 ## Fork it and change it
 
@@ -23,6 +23,12 @@ Clone https://github.com/ericzakariasson/voiced, read AGENTS.md at its root and 
 ```
 
 [Changes people often ask for](AGENTS.md#changes-people-often-ask-for) says where each one starts.
+
+## What it does
+
+Voiced is a native macOS menu bar app for dictation, written in Swift and SwiftUI. While you hold a hotkey it streams your voice to the SpaceXSI API for transcription, has a Grok model tidy the transcript, and pastes the result where your cursor is. Download it, or build it yourself from this repository, and use it with your own SpaceXSI API key.
+
+It needs macOS 26 or later, your own SpaceXSI API key, which SpaceXSI bills for what you dictate, and a network connection for every dictation. It does not transcribe on the Mac or offline, keeps no history, and has no custom dictionary or language setting.
 
 ## Install
 
@@ -56,6 +62,8 @@ That is what Voiced calls your SpaceXSI API key. Create one at [console.x.ai](ht
 Every request, permission and log field: [Permissions and privacy](docs/privacy.md).
 
 ## About this repository
+
+Voiced is inspired by Wispr Flow. It is an independent project, not affiliated with or endorsed by Wispr or SpaceXSI.
 
 Voiced is developed in a private working repository, and this one gets one commit from it for each release, and now and then one between releases that changes only the documentation. So the history here is a list of versions, not of changes to the app, and each release's commit holds the whole of that release.
 

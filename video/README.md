@@ -56,12 +56,12 @@ Captures belong to the plates they were made over. When the film's pictures chan
 
 The type has grey edges, as a Mac draws it. For that the desktop is made anew on every frame: the renderer would otherwise draw it once and stretch that picture as the view moves in, which blurs it.
 
-## The copy in the README
+## The film in the README
 
-The repository's README shows the film as an animated WebP, `docs/media/voiced-in-use.webp`: 896 × 560 at 10 frames a second, silent as the film is, looping, with the film's timing. GitHub plays a video in a README only from a file uploaded in the browser, and an animated image needs nobody to do that.
+The repository's README shows a film as an animated WebP, `docs/media/voiced-forks.webp`: 896 × 560 at 10 frames a second, silent, looping, with its film's timing. It is not this folder's film but another, of an agent forking Voiced, and `readme-webp.py` made it from that film's render as it would from this one's. GitHub plays a video in a README only from a file uploaded in the browser, and an animated image needs nobody to do that.
 
 ```sh
-python3 readme-webp.py out/voiced-in-use.mp4 ../docs/media/voiced-in-use.webp
+python3 readme-webp.py <film.mp4> ../docs/media/voiced-forks.webp
 ```
 
 That needs ffmpeg, `cwebp` (the `webp` package) and numpy. The script says why it does not use ffmpeg's own animated WebP encoder, which leaves grey blocks behind after every fade. Each new copy adds about 1 MB to the repository's history for good, so make one only for a cut that ships.
@@ -88,7 +88,7 @@ The product's name is `PRODUCT_NAME` in `src/script.ts`. It is the name at the e
 - **The pill appears when audio arrives,** as it does in the app, and its clock counts from then. The view is all the way in by then and does not move until the pill has gone.
 - **Apps built on Electron** say where their text is only once the app has switched their accessibility support on, which it does at the first dictation into them. That dictation's pill starts at the bottom of the app's window, and moves to the text if the app says where it is while the key is still held; otherwise it stays there. The team chat and the code editor show a later dictation, whose pill is by the text from the start.
 - **The insertion point blinks,** lit for half a second and dark for half, and starts again lit when the text lands.
-- **The item in the menu bar is the app's own.** The film in the README was given two pictures of it, taken from the app, idle and recording, and the item in its menu bar is their pixels, tinted like the bar's other marks. The item changes while the app listens, but the view is in on the field by then and the menu bar is out of the picture, so the film shows only the idle one. The app draws its item with one of the system's symbols. The film holds that symbol only as pixels of those pictures; no file of the system's typeface or symbols is in this repository or used by the renderer. A render that is given no pictures of the item draws shapes of the film's own in its place.
+- **The item in the menu bar is the app's own.** The film as it has been published was given two pictures of it, taken from the app, idle and recording, and the item in its menu bar is their pixels, tinted like the bar's other marks. The item changes while the app listens, but the view is in on the field by then and the menu bar is out of the picture, so the film shows only the idle one. The app draws its item with one of the system's symbols. The film holds that symbol only as pixels of those pictures; no file of the system's typeface or symbols is in this repository or used by the renderer. A render that is given no pictures of the item draws shapes of the film's own in its place.
 - **The caption under the screen** is the film's: it shows the words as they are spoken, fillers and all, because the film has no sound. The app shows no such thing. It is drawn outside the screen for that reason.
 - **The view moving in** is the film's, as is the screen standing on a plain ground. While the view is in, the screen's edge cuts what is beside the field, as it does in any view that is moved in on a screen; the field being written in is whole in every scene.
 - **What is said and what lands** is written for the film and is not the output of a real run. What lands is what the app's cleanup is told to make of it: punctuation and capitals fixed, "um", "uh" and "you know" removed, the words otherwise kept.
@@ -125,4 +125,4 @@ The files in this folder are under the repository's MIT license. Remotion itself
 - **A paid Company License** if you are a for-profit organization with more than three employees; pricing is at [remotion.dev/docs/license/pricing](https://www.remotion.dev/docs/license/pricing).
 - **Either way** you may not sell, rent or relicense a derivative of Remotion's own code.
 
-The film in the README was rendered under the free license, by an individual. The rest of this repository does not use Remotion.
+This film and the film in the README were rendered under the free license, by an individual. The rest of this repository does not use Remotion.

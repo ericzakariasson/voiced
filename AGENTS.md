@@ -121,8 +121,8 @@ Makefile                     Every command above
 local.mk                     Yours, git-ignored: per-machine settings such as TEAM
 README.md                    The front page for people: short, with links into docs/
 docs/                        For people: using-voiced.md, troubleshooting.md, privacy.md, building.md, releasing.md
-  media/                       The film of Voiced in use as an animated WebP, which the README shows
-video/                       That film's source, a project of its own; video/README.md says how the film and the WebP are made
+  media/                       The film the README shows, as an animated WebP
+video/                       The source of another film, of Voiced in use, a project of its own; video/README.md says how that film and the README's WebP are made
 ```
 
 How a dictation flows: `HotkeyMonitor` turns key events into `begin`, `end` and `cancel` through `HotkeyStateMachine`; `AppModel` passes them to `DictationController`, which starts `MicrophoneCapture`, feeds audio to a `TranscriptionSession`, hands the transcript to a `TextCleaning`, and gives the result to a `TextInserting`. With the Cleanup setting (`CleanupSetting`) off when the hotkey went down, no `TextCleaning` is made for that dictation and the transcript is inserted as it came. `IndicatorPanel` observes the controller's `phase` and `microphone` and shows the pill: listening only once audio has arrived, Starting Microphone… when none has half a second after the hotkey went down, and Polishing… only while the controller's `isPolishing` says so. With the pill set to Next to Text, `AppModel` also starts a `PillTextLookup` when the hotkey goes down (see [The pill next to text](#the-pill-next-to-text)).
